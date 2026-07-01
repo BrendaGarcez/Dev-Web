@@ -26,37 +26,43 @@
 
         <h2>Dashboard</h2>
 
-        <input type="text" id="busca" placeholder="Buscar produto... (Enter para ir à lista)">
+        <section class="busca-container">
+            <label for="busca">
+                Filtrar ou Ir para Lista:
+                <input type="text" id="busca" placeholder="Ex: Martelo (Pressione Enter para ir à lista)">
+            </label>
+        </section>
 
         <section class="cards-resumo">
-            <div class="card-stat">
+            <h3 class="sr-only">Estatísticas Gerais</h3>
+            <article class="card-stat">
                 <i class="fa-solid fa-box"></i>
                 <div>
                     <span class="stat-valor" id="totalProdutos">0</span>
                     <span class="stat-label">Total Produtos</span>
                 </div>
-            </div>
-            <div class="card-stat">
+            </article>
+            <article class="card-stat">
                 <i class="fa-solid fa-cubes"></i>
                 <div>
                     <span class="stat-valor" id="totalItens">0</span>
                     <span class="stat-label">Total Itens</span>
                 </div>
-            </div>
-            <div class="card-stat">
+            </article>
+            <article class="card-stat">
                 <i class="fa-solid fa-sack-dollar"></i>
                 <div>
                     <span class="stat-valor" id="valorTotal">R$ 0,00</span>
                     <span class="stat-label">Valor Total</span>
                 </div>
-            </div>
-            <div class="card-stat card-alerta">
+            </article>
+            <article class="card-stat card-alerta">
                 <i class="fa-solid fa-triangle-exclamation"></i>
                 <div>
                     <span class="stat-valor" id="totalEstoqueBaixo">0</span>
                     <span class="stat-label">Estoque Baixo</span>
                 </div>
-            </div>
+            </article>
         </section>
 
         <div class="grid-duas-colunas">
