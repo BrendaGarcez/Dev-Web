@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos em Estoque</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1><i class="fa-solid fa-boxes-stacked"></i> Sistema de Estoque</h1>
+        <nav class="nav-principal">
+            <a href="index.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+            <a href="produtos.html" class="ativo"><i class="fa-solid fa-list"></i> Produtos</a>
+            <a href="cadastro.html"><i class="fa-solid fa-plus"></i> Cadastro</a>
+            <a href="movimentacoes.html"><i class="fa-solid fa-clock-rotate-left"></i> Movimentações</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <h2>Lista de Produtos</h2>
+
+        <div class="filtros-produtos">
+            <input type="text" id="filtroProdutos" placeholder="Pesquisar por nome...">
+            <select id="filtroCategoria">
+                <option value="">Todas as categorias</option>
+            </select>
+        </div>
+
+        <p id="contadorProdutos" class="contador"></p>
+
+        <div id="listaProdutos"></div>
+
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

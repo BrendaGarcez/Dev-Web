@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Movimentações</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1><i class="fa-solid fa-boxes-stacked"></i> Sistema de Estoque</h1>
+        <nav class="nav-principal">
+            <a href="index.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+            <a href="produtos.html"><i class="fa-solid fa-list"></i> Produtos</a>
+            <a href="cadastro.html"><i class="fa-solid fa-plus"></i> Cadastro</a>
+            <a href="movimentacoes.html" class="ativo"><i class="fa-solid fa-clock-rotate-left"></i> Movimentações</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <h2>Histórico de Movimentações</h2>
+
+        <div class="filtros-produtos">
+            <select id="filtroTipo">
+                <option value="">Todos os tipos</option>
+                <option value="cadastro">Cadastro</option>
+                <option value="entrada">Entrada</option>
+                <option value="saida">Saída</option>
+                <option value="exclusao">Exclusão</option>
+            </select>
+        </div>
+
+        <div id="listaMovimentacoes"></div>
+
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

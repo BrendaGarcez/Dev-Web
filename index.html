@@ -1,23 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <title>Gestão de Estoque</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
-    <main>
-        <h1></h1>
-    </main>
 
-    <div id="A"></div>
-    <div id="B"></div>
+    <header>
+        <h1><i class="fa-solid fa-boxes-stacked"></i> Sistema de Estoque</h1>
+        <nav class="nav-principal">
+            <a href="index.html" class="ativo"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+            <a href="produtos.html"><i class="fa-solid fa-list"></i> Produtos</a>
+            <a href="cadastro.html"><i class="fa-solid fa-plus"></i> Cadastro</a>
+            <a href="movimentacoes.html"><i class="fa-solid fa-clock-rotate-left"></i> Movimentações</a>
+        </nav>
+    </header>
 
-    <script>
+    <div class="container" id="dashboard">
 
-    </script>
+        <h2>Dashboard</h2>
+
+        <input type="text" id="busca" placeholder="Buscar produto... (Enter para ir à lista)">
+
+        <section class="cards-resumo">
+            <div class="card-stat">
+                <i class="fa-solid fa-box"></i>
+                <div>
+                    <span class="stat-valor" id="totalProdutos">0</span>
+                    <span class="stat-label">Total Produtos</span>
+                </div>
+            </div>
+            <div class="card-stat">
+                <i class="fa-solid fa-cubes"></i>
+                <div>
+                    <span class="stat-valor" id="totalItens">0</span>
+                    <span class="stat-label">Total Itens</span>
+                </div>
+            </div>
+            <div class="card-stat">
+                <i class="fa-solid fa-sack-dollar"></i>
+                <div>
+                    <span class="stat-valor" id="valorTotal">R$ 0,00</span>
+                    <span class="stat-label">Valor Total</span>
+                </div>
+            </div>
+            <div class="card-stat card-alerta">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <div>
+                    <span class="stat-valor" id="totalEstoqueBaixo">0</span>
+                    <span class="stat-label">Estoque Baixo</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid-duas-colunas">
+            <section>
+                <h2><i class="fa-solid fa-bell"></i> Alertas de Estoque</h2>
+                <div id="alertasEstoque"></div>
+            </section>
+
+            <section>
+                <h2><i class="fa-solid fa-tags"></i> Resumo por Categoria</h2>
+                <div id="resumoCategorias"></div>
+            </section>
+        </div>
+
+        <section>
+            <h2><i class="fa-solid fa-clock-rotate-left"></i> Últimas Movimentações</h2>
+            <div id="ultimasMovimentacoes"></div>
+            <a href="movimentacoes.html" class="link-ver-mais">Ver histórico completo <i class="fa-solid fa-arrow-right"></i></a>
+        </section>
+
+        <section>
+            <h2>Ações Rápidas</h2>
+            <div class="grupo-botoes">
+                <button onclick="window.location.href='produtos.html'">
+                    <i class="fa-solid fa-list"></i> Ver Produtos
+                </button>
+                <button onclick="window.location.href='cadastro.html'">
+                    <i class="fa-solid fa-plus"></i> Adicionar Produto
+                </button>
+                <button id="btnExportar" class="btn-secundario">
+                    <i class="fa-solid fa-download"></i> Exportar Backup
+                </button>
+                <label class="btn-secundario btn-importar">
+                    <i class="fa-solid fa-upload"></i> Importar Backup
+                    <input type="file" id="inputImportar" accept=".json" hidden>
+                </label>
+            </div>
+        </section>
+
+    </div>
+
     <script src="main.js"></script>
+
 </body>
 
 </html>
