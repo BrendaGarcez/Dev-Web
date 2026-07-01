@@ -19,6 +19,7 @@
             <a href="produtos.html"><i class="fa-solid fa-list"></i> Produtos</a>
             <a href="cadastro.html" class="ativo"><i class="fa-solid fa-plus"></i> Cadastro</a>
             <a href="movimentacoes.html"><i class="fa-solid fa-clock-rotate-left"></i> Movimentações</a>
+            <a href="contatos.html"><i class="fa-solid fa-users"></i> Contatos</a>
         </nav>
     </header>
 
@@ -50,13 +51,19 @@
             <label>Estoque Mínimo (alerta)</label>
             <input type="number" id="estoqueMinimo" min="0" value="5" placeholder="Quantidade mínima antes do alerta">
 
+            <label for="fornecedor">Fornecedor</label>
+            <select id="fornecedor">
+                <option value="">Selecione um fornecedor (opcional)...</option>
+            </select>
+
             <button type="submit"><i class="fa-solid fa-save"></i> Salvar Produto</button>
 
         </form>
 
     </div>
 
-    <script src="main.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/cadastro.js"></script>
 
 </body>
 

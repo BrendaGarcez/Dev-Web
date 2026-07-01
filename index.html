@@ -19,6 +19,7 @@
             <a href="produtos.html"><i class="fa-solid fa-list"></i> Produtos</a>
             <a href="cadastro.html"><i class="fa-solid fa-plus"></i> Cadastro</a>
             <a href="movimentacoes.html"><i class="fa-solid fa-clock-rotate-left"></i> Movimentações</a>
+            <a href="contatos.html"><i class="fa-solid fa-users"></i> Contatos</a>
         </nav>
     </header>
 
@@ -92,6 +93,9 @@
                 <button onclick="window.location.href='cadastro.html'">
                     <i class="fa-solid fa-plus"></i> Adicionar Produto
                 </button>
+                <button onclick="registrarVendaRapida()">
+                    <i class="fa-solid fa-cart-shopping"></i> Registrar Venda
+                </button>
                 <button id="btnExportar" class="btn-secundario">
                     <i class="fa-solid fa-download"></i> Exportar Backup
                 </button>
@@ -104,7 +108,8 @@
 
     </div>
 
-    <script src="main.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/dashboard.js"></script>
 
 </body>
 
